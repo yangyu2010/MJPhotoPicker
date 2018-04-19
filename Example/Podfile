@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MJPhotoPicker_Example' do
+  pod 'MJPhotoPicker', :path => '../'
+
+  target 'MJPhotoPicker_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
