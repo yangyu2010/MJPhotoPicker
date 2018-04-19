@@ -1,0 +1,22 @@
+{
+  "name": "MJPhotoPicker",
+  "version": "0.1.0",
+  "summary": "A short description of MJPhotoPicker.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/yangyu2010@aliyun.com/MJPhotoPicker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yangyu2010@aliyun.com": "yangyu2010@aliyun.com"
+  },
+  "source": {
+    "git": "https://github.com/yangyu2010@aliyun.com/MJPhotoPicker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MJPhotoPicker/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module MJPhotoPicker {
+  umbrella header "MJPhotoPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

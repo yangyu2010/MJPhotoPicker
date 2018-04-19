@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - MJPhotoPicker (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - MJPhotoPicker (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  MJPhotoPicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  MJPhotoPicker: 4b660b3ebcc69bce575156903c17c2440de468d5
+
+PODFILE CHECKSUM: d0f7a219b6a45821a9a9d4b33327b9dde2533e68
+
+COCOAPODS: 1.5.0
