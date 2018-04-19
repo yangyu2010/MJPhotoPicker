@@ -14,7 +14,7 @@
 #import "MJAlbumModel.h"
 #import "MJImagePickerController.h"
 #import "PhotoPickerToolView.h"
-
+#import "UIView+Sugar.h"
 
 #define kPhotoCollectionCellID      @"PhotoCollectionCell.h"
 
@@ -44,6 +44,8 @@
 
     [self viewConfig];
     [self dataConfig];
+    
+
 }
 
 - (void)dealloc {
@@ -55,16 +57,17 @@
 - (void)dataConfig {
    
     _arrAssets = self.modelAlbum.arrModels;
+    [_collectionPhoto reloadData];
     
     MJImagePickerController *navPicker = (MJImagePickerController *)self.navigationController;
     if ([navPicker isKindOfClass:[MJImagePickerController class]]) {
         self.navPicker = navPicker;
     }
 
-    _viewBottomTool.countSelected = self.navPicker.arrSelectedModels.count;
-    if ((_arrAssets.count > 0) && (_arrAssets.count == self.navPicker.arrSelectedModels.count)) {
-        [_viewBottomTool setSelectedAll];
-    }
+//    _viewBottomTool.countSelected = self.navPicker.arrSelectedModels.count;
+//    if ((_arrAssets.count > 0) && (_arrAssets.count == self.navPicker.arrSelectedModels.count)) {
+//        [_viewBottomTool setSelectedAll];
+//    }
     
 }
 
@@ -77,6 +80,7 @@
     
     _collectionPhoto = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
     _collectionPhoto.backgroundColor = [UIColor whiteColor];
+    _collectionPhoto.allowsMultipleSelection = YES;
     _collectionPhoto.delegate = self;
     _collectionPhoto.dataSource = self;
     [self.view addSubview:_collectionPhoto];
@@ -88,30 +92,52 @@
     _viewBottomTool.delegate = self;
     [self.view addSubview:_viewBottomTool];
     
-    
 }
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    
-    _viewBottomTool.frame = CGRectMake(0, self.view.bounds.size.height - kPhotoBottomViewHeight, self.view.bounds.size.width, kPhotoBottomViewHeight);
-    
-    _collectionPhoto.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - kPhotoBottomViewHeight);
-    
-    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)_collectionPhoto.collectionViewLayout;
-    
-    layout.minimumLineSpacing = kPhotoCollectionCellMargin;
-    layout.minimumInteritemSpacing = kPhotoCollectionCellMargin;
-    
-    CGFloat wh = (self.view.bounds.size.width - (kPhotoCollectionRowCount + 1) * kPhotoCollectionCellMargin) / kPhotoCollectionRowCount;
-    layout.itemSize = CGSizeMake(wh, wh);
-    
-}
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    [self actionCollectionViewScrollBottom];
+    [_collectionPhoto.collectionViewLayout invalidateLayout];
+    
+    CGFloat safeBottom = 0;
+    if (@available(iOS 11.0, *)) {
+        safeBottom = self.view.safeAreaInsets.bottom;
+        _viewBottomTool.frame = CGRectMake(0, self.view.bounds.size.height - kPhotoBottomViewHeight - self.view.safeAreaInsets.bottom, self.view.bounds.size.width, kPhotoBottomViewHeight + self.view.safeAreaInsets.bottom);
+    } else {
+        _viewBottomTool.frame = CGRectMake(0, self.view.bounds.size.height - kPhotoBottomViewHeight, self.view.bounds.size.width, kPhotoBottomViewHeight);
+    }
+    
+    _collectionPhoto.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - kPhotoBottomViewHeight - safeBottom);
+    
+    
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionPhoto.collectionViewLayout;
+    
+    CGFloat margin = 10;     // 两个item中间的间距
+    CGFloat padding = 15.0f;   // item右边距离边框的距离默认都是0
+    
+    CGFloat maxWidth = 160.0f;
+    
+    NSInteger row = 4;
+    CGFloat itemWidth = (self.view.width - (row - 1) * margin - 2 * padding) / row;
+    
+    if (itemWidth > maxWidth) {
+        /// pad上
+        itemWidth = 120;
+        row = (self.view.width - 2 * margin) / itemWidth;
+        margin = (self.view.width - row * itemWidth) / (row + 1);
+        padding = margin;
+    }
+    
+    
+    layout.itemSize = CGSizeMake(itemWidth, itemWidth);
+    layout.minimumLineSpacing = margin;
+    layout.minimumInteritemSpacing = margin;
+    
+    [self.collectionPhoto setCollectionViewLayout:layout];
+    
+    [self.collectionPhoto setContentInset:UIEdgeInsetsMake(0, margin, 0, margin)];
+    
 }
 
 
@@ -126,7 +152,13 @@
     if (_arrAssets.count == 0) {
         return ;
     }
-    [_collectionPhoto scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_arrAssets.count - 1 inSection:0] atScrollPosition:UICollectionViewScrollPositionBottom animated:NO];
+    
+    NSInteger count = [_collectionPhoto numberOfItemsInSection:0];
+    if (count > 0) {
+        count -= 1;
+    }
+    
+    [_collectionPhoto scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:count inSection:0] atScrollPosition:UICollectionViewScrollPositionBottom animated:NO];
 }
 
 /// 点击cell, 添加或者删除Model
@@ -139,44 +171,19 @@
     MJAssetModel *model = _arrAssets[indexPath.item];
 
     if (model.isSelected) {
-        /// 已经添加了, 要移除
-        for (MJAssetModel *oldModel in self.navPicker.arrSelectedModels) {
-            if ([oldModel isEqual:model]) {
-                // 如果是相同的Model, 代表是一个相册, 直接删除
-                [self.navPicker.arrSelectedModels removeObject:oldModel];
-                break;
-            } else {
-                // 如果不是, 对比id, 可能是同一张照片, 放在不同的相簿中
-                if ([oldModel isSameAssetModel:model]) {
-                    oldModel.isSelected = NO;
-                    [self.navPicker.arrSelectedModels removeObject:oldModel];
-                    break;
-                }
-            }
-        }
-    }
-    else {
-        // 需要判断当前最大数
-        if (![self.navPicker isImagePickerCanAddAssets]) {
-            NSString *message = [NSString stringWithFormat:@"您最多只能选择%ld", (long)self.navPicker.maxImagesCount];
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction: [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
-            [self presentViewController:alert animated:YES completion:nil];
-            return;
-        }
-        
+        [self.navPicker.arrSelectedModels removeObject:model];
+        model.isSelected = NO;
+    } else {
         [self.navPicker.arrSelectedModels addObject:model];
+        model.isSelected = YES;
     }
-    
-    model.isSelected = !model.isSelected;
-    [_collectionPhoto reloadItemsAtIndexPaths:@[indexPath]];
-    
     self.viewBottomTool.countSelected = self.navPicker.arrSelectedModels.count;
 }
 
 
 #pragma mark- DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
     return _arrAssets.count;
 }
 
@@ -190,10 +197,11 @@
 #pragma mark- Delegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-//    MJAssetModel *model = _arrAssets[indexPath.item];
-    //model.isSelected = !model.isSelected;
-    //[collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    [self actionAddSelectedModelAtIndexPath:indexPath];
     
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     [self actionAddSelectedModelAtIndexPath:indexPath];
 }
 

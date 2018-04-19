@@ -44,7 +44,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self actionRefreshTableView];
+//    [self actionRefreshTableView];
 }
 
 #pragma mark- Data

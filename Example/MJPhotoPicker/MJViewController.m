@@ -27,8 +27,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-        MJImagePickerController *vc = [[MJImagePickerController alloc] initWithMaxImagesCount:0 columnNumber:0 delegate:nil pushPhotoPickerVc:YES];
-        [self presentViewController:vc animated:YES completion:nil];
+    MJImagePickerController *vc = [[MJImagePickerController alloc] initWithMaxImagesCount:0 columnNumber:0 delegate:nil pushPhotoPickerVc:YES];
+    [self presentViewController:vc animated:YES completion:nil];
 
 }
 @end

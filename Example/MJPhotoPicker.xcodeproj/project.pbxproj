@@ -264,12 +264,12 @@
 			children = (
 				86E669B620884B7B0090ACCD /* MJImagePickerController.h */,
 				86E669B220884B7B0090ACCD /* MJImagePickerController.m */,
-				86E669B320884B7B0090ACCD /* MJPhotoPreviewController.h */,
-				86E669B720884B7B0090ACCD /* MJPhotoPreviewController.m */,
-				86E669B820884B7B0090ACCD /* MJPhotoPickerController.h */,
-				86E669B420884B7B0090ACCD /* MJPhotoPickerController.m */,
 				86E669B920884B7B0090ACCD /* MJAlbumsController.h */,
 				86E669B520884B7B0090ACCD /* MJAlbumsController.m */,
+				86E669B820884B7B0090ACCD /* MJPhotoPickerController.h */,
+				86E669B420884B7B0090ACCD /* MJPhotoPickerController.m */,
+				86E669B320884B7B0090ACCD /* MJPhotoPreviewController.h */,
+				86E669B720884B7B0090ACCD /* MJPhotoPreviewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,8 +304,8 @@
 				86E669C720884B7B0090ACCD /* PhotoTypes.h */,
 				86E669C820884B7B0090ACCD /* MJAlbumModel.h */,
 				86E669CA20884B7B0090ACCD /* MJAlbumModel.m */,
-				86E669C920884B7B0090ACCD /* MJAssetModel.m */,
 				86E669CB20884B7B0090ACCD /* MJAssetModel.h */,
+				86E669C920884B7B0090ACCD /* MJAssetModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -421,6 +421,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "yangyu2010@aliyun.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -679,12 +682,15 @@
 			baseConfigurationReference = 6ED68E1ABFBF7F78401E3018 /* Pods-MJPhotoPicker_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MJPhotoPicker/MJPhotoPicker-Prefix.pch";
 				INFOPLIST_FILE = "MJPhotoPicker/MJPhotoPicker-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -694,12 +700,15 @@
 			baseConfigurationReference = 0F5A9A614D425D4D61359C9F /* Pods-MJPhotoPicker_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MJPhotoPicker/MJPhotoPicker-Prefix.pch";
 				INFOPLIST_FILE = "MJPhotoPicker/MJPhotoPicker-Info.plist";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -64,6 +64,14 @@
 
 #pragma mark- Set
 
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    
+    
+    self.viewBg.hidden = !selected;
+    self.imageViewSelected.hidden = !selected;
+}
+
 - (void)setModel:(MJAssetModel *)model {
     _model = model;
     
@@ -81,8 +89,7 @@
     self.viewBg.hidden = YES;
     self.imageViewSelected.hidden = YES;
     
-    self.viewBg.hidden = !model.isSelected;
-    self.imageViewSelected.hidden = !model.isSelected;
+
 }
 
 #pragma mark- Get

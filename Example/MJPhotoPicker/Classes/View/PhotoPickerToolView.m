@@ -56,7 +56,7 @@
     CGFloat rgb = 253 / 255.0;
     self.backgroundColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:1.0];
 
-    [self addSubview:self.btnSelectAll];
+//    [self addSubview:self.btnSelectAll];
     [self addSubview:self.btnPreview];
     [self addSubview:self.btnDone];
     [self addSubview:self.imgViewNumber];
@@ -67,21 +67,25 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.viewLine.frame = CGRectMake(0, 0, self.width, 1.0);
-    
     // cell的间距
     CGFloat margin = 5.0;
-    CGFloat btnAllInW = 111.0f;
-    CGFloat btnPreviewW = 80.0f;
-    CGFloat btnDoneWH = 50.0f;
+    CGFloat btnAllInW = 70; //111.0f;
+    //    CGFloat btnPreviewW = 80.0f;
+    CGFloat btnDoneWH = 80.0f;
     CGFloat lblCountWh = [self.lblCount contentWidth];
     
-    self.btnSelectAll.frame = CGRectMake(margin, 0, btnAllInW, self.height);
-    self.btnPreview.frame = CGRectMake(self.width * 0.5 - btnPreviewW * 0.5, 0, btnPreviewW, self.height);
-    self.btnDone.frame = CGRectMake(self.right - btnDoneWH - margin, 0, btnDoneWH, self.height);
-
-    self.lblCount.frame = CGRectMake(self.btnDone.left - lblCountWh, self.height * 0.5 - lblCountWh * 0.5, lblCountWh, lblCountWh);
+    CGFloat height = 49.0f;
+    
+    //    self.btnSelectAll.frame = CGRectMake(margin, 0, btnAllInW, height);
+    //    self.btnPreview.frame = CGRectMake(self.width * 0.5 - btnPreviewW * 0.5, 0, btnPreviewW, height);
+    
+    self.btnPreview.frame = CGRectMake(margin, 0, btnAllInW, height);
+    
+    self.btnDone.frame = CGRectMake(self.right - btnDoneWH - margin, 0, btnDoneWH, height);
+    
+    self.lblCount.frame = CGRectMake(self.width - 50 - lblCountWh, height * 0.5 - lblCountWh * 0.5, lblCountWh, lblCountWh);
     self.imgViewNumber.frame = self.lblCount.frame;
+    
 }
 
 #pragma mark- Data
@@ -175,6 +179,7 @@
         [_btnDone setTitle:@"Done" forState:UIControlStateDisabled];
         [_btnDone setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_btnDone setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+        _btnDone.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
     }
     return _btnDone;
 }
