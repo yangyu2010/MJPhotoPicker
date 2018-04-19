@@ -21,6 +21,26 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		86E669E320884B7B0090ACCD /* MJImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669B220884B7B0090ACCD /* MJImagePickerController.m */; };
+		86E669E420884B7B0090ACCD /* MJPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669B420884B7B0090ACCD /* MJPhotoPickerController.m */; };
+		86E669E520884B7B0090ACCD /* MJAlbumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669B520884B7B0090ACCD /* MJAlbumsController.m */; };
+		86E669E620884B7B0090ACCD /* MJPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669B720884B7B0090ACCD /* MJPhotoPreviewController.m */; };
+		86E669E720884B7B0090ACCD /* NSObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669BC20884B7B0090ACCD /* NSObject+Utils.m */; };
+		86E669E820884B7B0090ACCD /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669BD20884B7B0090ACCD /* UIImage+GIF.m */; };
+		86E669E920884B7B0090ACCD /* UILabel+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669BE20884B7B0090ACCD /* UILabel+Category.m */; };
+		86E669EA20884B7B0090ACCD /* UIView+Sugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669BF20884B7B0090ACCD /* UIView+Sugar.m */; };
+		86E669EB20884B7B0090ACCD /* MJImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669C520884B7B0090ACCD /* MJImageManager.m */; };
+		86E669EC20884B7B0090ACCD /* MJAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669C920884B7B0090ACCD /* MJAssetModel.m */; };
+		86E669ED20884B7B0090ACCD /* MJAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669CA20884B7B0090ACCD /* MJAlbumModel.m */; };
+		86E669EE20884B7B0090ACCD /* PhotoPickerToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669CD20884B7B0090ACCD /* PhotoPickerToolView.m */; };
+		86E669EF20884B7B0090ACCD /* AlbumsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669CF20884B7B0090ACCD /* AlbumsCell.m */; };
+		86E669F020884B7B0090ACCD /* PhotoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669D220884B7B0090ACCD /* PhotoCollectionCell.m */; };
+		86E669F120884B7B0090ACCD /* VideoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669D620884B7B0090ACCD /* VideoPreviewCell.m */; };
+		86E669F220884B7B0090ACCD /* LivePhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669D820884B7B0090ACCD /* LivePhotoPreviewCell.m */; };
+		86E669F320884B7B0090ACCD /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669DC20884B7B0090ACCD /* ProgressView.m */; };
+		86E669F420884B7B0090ACCD /* PhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669DD20884B7B0090ACCD /* PhotoPreviewCell.m */; };
+		86E669F520884B7B0090ACCD /* PhotoPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669E020884B7B0090ACCD /* PhotoPreviewView.m */; };
+		86E669F620884B7B0090ACCD /* AssetPreviewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E669E120884B7B0090ACCD /* AssetPreviewBaseCell.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A94F374A3A8B01633806FB47 /* Pods_MJPhotoPicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A95D398AB4397C6923B2E57 /* Pods_MJPhotoPicker_Example.framework */; };
 		AB56D80A196BBE10C116F4A1 /* Pods_MJPhotoPicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924111CAE1BE6A65AEE5D8A5 /* Pods_MJPhotoPicker_Tests.framework */; };
@@ -37,10 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03E4FA119614F2424BFEF767 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		03E4FA119614F2424BFEF767 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		0A95D398AB4397C6923B2E57 /* Pods_MJPhotoPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MJPhotoPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5A9A614D425D4D61359C9F /* Pods-MJPhotoPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoPicker_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoPicker_Example/Pods-MJPhotoPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
-		51B6B8797CBAE2313E82B3BF /* MJPhotoPicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MJPhotoPicker.podspec; path = ../MJPhotoPicker.podspec; sourceTree = "<group>"; };
+		51B6B8797CBAE2313E82B3BF /* MJPhotoPicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MJPhotoPicker.podspec; path = ../MJPhotoPicker.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5E35EE1E58685BE8D00EA8B1 /* Pods-MJPhotoPicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoPicker_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoPicker_Tests/Pods-MJPhotoPicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MJPhotoPicker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJPhotoPicker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,8 +83,49 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6ED68E1ABFBF7F78401E3018 /* Pods-MJPhotoPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoPicker_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoPicker_Example/Pods-MJPhotoPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86E669B220884B7B0090ACCD /* MJImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJImagePickerController.m; sourceTree = "<group>"; };
+		86E669B320884B7B0090ACCD /* MJPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoPreviewController.h; sourceTree = "<group>"; };
+		86E669B420884B7B0090ACCD /* MJPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoPickerController.m; sourceTree = "<group>"; };
+		86E669B520884B7B0090ACCD /* MJAlbumsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAlbumsController.m; sourceTree = "<group>"; };
+		86E669B620884B7B0090ACCD /* MJImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJImagePickerController.h; sourceTree = "<group>"; };
+		86E669B720884B7B0090ACCD /* MJPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoPreviewController.m; sourceTree = "<group>"; };
+		86E669B820884B7B0090ACCD /* MJPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoPickerController.h; sourceTree = "<group>"; };
+		86E669B920884B7B0090ACCD /* MJAlbumsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAlbumsController.h; sourceTree = "<group>"; };
+		86E669BB20884B7B0090ACCD /* UIView+Sugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sugar.h"; sourceTree = "<group>"; };
+		86E669BC20884B7B0090ACCD /* NSObject+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Utils.m"; sourceTree = "<group>"; };
+		86E669BD20884B7B0090ACCD /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		86E669BE20884B7B0090ACCD /* UILabel+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Category.m"; sourceTree = "<group>"; };
+		86E669BF20884B7B0090ACCD /* UIView+Sugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sugar.m"; sourceTree = "<group>"; };
+		86E669C020884B7B0090ACCD /* NSObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Utils.h"; sourceTree = "<group>"; };
+		86E669C120884B7B0090ACCD /* UILabel+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Category.h"; sourceTree = "<group>"; };
+		86E669C220884B7B0090ACCD /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		86E669C420884B7B0090ACCD /* MJImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJImageManager.h; sourceTree = "<group>"; };
+		86E669C520884B7B0090ACCD /* MJImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJImageManager.m; sourceTree = "<group>"; };
+		86E669C720884B7B0090ACCD /* PhotoTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTypes.h; sourceTree = "<group>"; };
+		86E669C820884B7B0090ACCD /* MJAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAlbumModel.h; sourceTree = "<group>"; };
+		86E669C920884B7B0090ACCD /* MJAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAssetModel.m; sourceTree = "<group>"; };
+		86E669CA20884B7B0090ACCD /* MJAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAlbumModel.m; sourceTree = "<group>"; };
+		86E669CB20884B7B0090ACCD /* MJAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAssetModel.h; sourceTree = "<group>"; };
+		86E669CD20884B7B0090ACCD /* PhotoPickerToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerToolView.m; sourceTree = "<group>"; };
+		86E669CF20884B7B0090ACCD /* AlbumsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumsCell.m; sourceTree = "<group>"; };
+		86E669D020884B7B0090ACCD /* AlbumsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumsCell.h; sourceTree = "<group>"; };
+		86E669D220884B7B0090ACCD /* PhotoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionCell.m; sourceTree = "<group>"; };
+		86E669D320884B7B0090ACCD /* PhotoCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionCell.h; sourceTree = "<group>"; };
+		86E669D420884B7B0090ACCD /* PhotoPickerToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerToolView.h; sourceTree = "<group>"; };
+		86E669D620884B7B0090ACCD /* VideoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPreviewCell.m; sourceTree = "<group>"; };
+		86E669D720884B7B0090ACCD /* PhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPreviewCell.h; sourceTree = "<group>"; };
+		86E669D820884B7B0090ACCD /* LivePhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePhotoPreviewCell.m; sourceTree = "<group>"; };
+		86E669D920884B7B0090ACCD /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		86E669DA20884B7B0090ACCD /* AssetPreviewBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetPreviewBaseCell.h; sourceTree = "<group>"; };
+		86E669DB20884B7B0090ACCD /* PhotoPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPreviewView.h; sourceTree = "<group>"; };
+		86E669DC20884B7B0090ACCD /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		86E669DD20884B7B0090ACCD /* PhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPreviewCell.m; sourceTree = "<group>"; };
+		86E669DE20884B7B0090ACCD /* LivePhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePhotoPreviewCell.h; sourceTree = "<group>"; };
+		86E669DF20884B7B0090ACCD /* VideoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPreviewCell.h; sourceTree = "<group>"; };
+		86E669E020884B7B0090ACCD /* PhotoPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPreviewView.m; sourceTree = "<group>"; };
+		86E669E120884B7B0090ACCD /* AssetPreviewBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetPreviewBaseCell.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9002018657CA6582E02586E3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9002018657CA6582E02586E3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		924111CAE1BE6A65AEE5D8A5 /* Pods_MJPhotoPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MJPhotoPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3BF7BD3295B29929813666 /* Pods-MJPhotoPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoPicker_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoPicker_Tests/Pods-MJPhotoPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +193,7 @@
 		6003F593195388D20070C39A /* Example for MJPhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				86E669AF20884B7B0090ACCD /* Classes */,
 				6003F59C195388D20070C39A /* MJAppDelegate.h */,
 				6003F59D195388D20070C39A /* MJAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -185,6 +247,118 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		86E669AF20884B7B0090ACCD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				86E669B120884B7B0090ACCD /* Controller */,
+				86E669BA20884B7B0090ACCD /* Libs */,
+				86E669C320884B7B0090ACCD /* Manager */,
+				86E669C620884B7B0090ACCD /* Model */,
+				86E669CC20884B7B0090ACCD /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		86E669B120884B7B0090ACCD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				86E669B620884B7B0090ACCD /* MJImagePickerController.h */,
+				86E669B220884B7B0090ACCD /* MJImagePickerController.m */,
+				86E669B320884B7B0090ACCD /* MJPhotoPreviewController.h */,
+				86E669B720884B7B0090ACCD /* MJPhotoPreviewController.m */,
+				86E669B820884B7B0090ACCD /* MJPhotoPickerController.h */,
+				86E669B420884B7B0090ACCD /* MJPhotoPickerController.m */,
+				86E669B920884B7B0090ACCD /* MJAlbumsController.h */,
+				86E669B520884B7B0090ACCD /* MJAlbumsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		86E669BA20884B7B0090ACCD /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				86E669BB20884B7B0090ACCD /* UIView+Sugar.h */,
+				86E669BF20884B7B0090ACCD /* UIView+Sugar.m */,
+				86E669C020884B7B0090ACCD /* NSObject+Utils.h */,
+				86E669BC20884B7B0090ACCD /* NSObject+Utils.m */,
+				86E669C220884B7B0090ACCD /* UIImage+GIF.h */,
+				86E669BD20884B7B0090ACCD /* UIImage+GIF.m */,
+				86E669C120884B7B0090ACCD /* UILabel+Category.h */,
+				86E669BE20884B7B0090ACCD /* UILabel+Category.m */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		86E669C320884B7B0090ACCD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				86E669C420884B7B0090ACCD /* MJImageManager.h */,
+				86E669C520884B7B0090ACCD /* MJImageManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		86E669C620884B7B0090ACCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				86E669C720884B7B0090ACCD /* PhotoTypes.h */,
+				86E669C820884B7B0090ACCD /* MJAlbumModel.h */,
+				86E669CA20884B7B0090ACCD /* MJAlbumModel.m */,
+				86E669C920884B7B0090ACCD /* MJAssetModel.m */,
+				86E669CB20884B7B0090ACCD /* MJAssetModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		86E669CC20884B7B0090ACCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86E669D420884B7B0090ACCD /* PhotoPickerToolView.h */,
+				86E669CD20884B7B0090ACCD /* PhotoPickerToolView.m */,
+				86E669CE20884B7B0090ACCD /* AlbumsCell */,
+				86E669D120884B7B0090ACCD /* PhotoCell */,
+				86E669D520884B7B0090ACCD /* PreviewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86E669CE20884B7B0090ACCD /* AlbumsCell */ = {
+			isa = PBXGroup;
+			children = (
+				86E669D020884B7B0090ACCD /* AlbumsCell.h */,
+				86E669CF20884B7B0090ACCD /* AlbumsCell.m */,
+			);
+			path = AlbumsCell;
+			sourceTree = "<group>";
+		};
+		86E669D120884B7B0090ACCD /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				86E669D320884B7B0090ACCD /* PhotoCollectionCell.h */,
+				86E669D220884B7B0090ACCD /* PhotoCollectionCell.m */,
+			);
+			path = PhotoCell;
+			sourceTree = "<group>";
+		};
+		86E669D520884B7B0090ACCD /* PreviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				86E669DF20884B7B0090ACCD /* VideoPreviewCell.h */,
+				86E669D620884B7B0090ACCD /* VideoPreviewCell.m */,
+				86E669D720884B7B0090ACCD /* PhotoPreviewCell.h */,
+				86E669DD20884B7B0090ACCD /* PhotoPreviewCell.m */,
+				86E669D820884B7B0090ACCD /* LivePhotoPreviewCell.m */,
+				86E669DE20884B7B0090ACCD /* LivePhotoPreviewCell.h */,
+				86E669D920884B7B0090ACCD /* ProgressView.h */,
+				86E669DC20884B7B0090ACCD /* ProgressView.m */,
+				86E669DA20884B7B0090ACCD /* AssetPreviewBaseCell.h */,
+				86E669E120884B7B0090ACCD /* AssetPreviewBaseCell.m */,
+				86E669DB20884B7B0090ACCD /* PhotoPreviewView.h */,
+				86E669E020884B7B0090ACCD /* PhotoPreviewView.m */,
+			);
+			path = PreviewCell;
+			sourceTree = "<group>";
+		};
 		F62287849B0A74AA8C407CCF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +381,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				BCFD2FD011594973C5D4F9EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,24 +504,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BCFD2FD011594973C5D4F9EC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MJPhotoPicker_Example/Pods-MJPhotoPicker_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/MJPhotoPicker/MJPhotoPicker.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJPhotoPicker.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJPhotoPicker_Example/Pods-MJPhotoPicker_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C6104B79D0D01FD9295FC631 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,9 +529,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E669F520884B7B0090ACCD /* PhotoPreviewView.m in Sources */,
+				86E669E820884B7B0090ACCD /* UIImage+GIF.m in Sources */,
+				86E669F320884B7B0090ACCD /* ProgressView.m in Sources */,
+				86E669F020884B7B0090ACCD /* PhotoCollectionCell.m in Sources */,
+				86E669F620884B7B0090ACCD /* AssetPreviewBaseCell.m in Sources */,
+				86E669E620884B7B0090ACCD /* MJPhotoPreviewController.m in Sources */,
+				86E669ED20884B7B0090ACCD /* MJAlbumModel.m in Sources */,
+				86E669F120884B7B0090ACCD /* VideoPreviewCell.m in Sources */,
+				86E669E320884B7B0090ACCD /* MJImagePickerController.m in Sources */,
 				6003F59E195388D20070C39A /* MJAppDelegate.m in Sources */,
+				86E669E520884B7B0090ACCD /* MJAlbumsController.m in Sources */,
+				86E669EA20884B7B0090ACCD /* UIView+Sugar.m in Sources */,
+				86E669EC20884B7B0090ACCD /* MJAssetModel.m in Sources */,
 				6003F5A7195388D20070C39A /* MJViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				86E669EB20884B7B0090ACCD /* MJImageManager.m in Sources */,
+				86E669EF20884B7B0090ACCD /* AlbumsCell.m in Sources */,
+				86E669E420884B7B0090ACCD /* MJPhotoPickerController.m in Sources */,
+				86E669E920884B7B0090ACCD /* UILabel+Category.m in Sources */,
+				86E669EE20884B7B0090ACCD /* PhotoPickerToolView.m in Sources */,
+				86E669E720884B7B0090ACCD /* NSObject+Utils.m in Sources */,
+				86E669F220884B7B0090ACCD /* LivePhotoPreviewCell.m in Sources */,
+				86E669F420884B7B0090ACCD /* PhotoPreviewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

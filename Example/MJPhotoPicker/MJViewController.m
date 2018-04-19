@@ -7,6 +7,8 @@
 //
 
 #import "MJViewController.h"
+//#import <MJPhotoPicker/MJImagePickerController.h>
+#import "MJImagePickerController.h"
 
 @interface MJViewController ()
 
@@ -18,12 +20,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+        MJImagePickerController *vc = [[MJImagePickerController alloc] initWithMaxImagesCount:0 columnNumber:0 delegate:nil pushPhotoPickerVc:YES];
+        [self presentViewController:vc animated:YES completion:nil];
 
+}
 @end
